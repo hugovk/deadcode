@@ -32,6 +32,8 @@ jobs:
     - name: Install dependencies
       run: |
         make .venv
+      env:
+        PYTHON_VERSION: ${{ matrix.python-version }}
 
     - name: Run checks
       run: |
